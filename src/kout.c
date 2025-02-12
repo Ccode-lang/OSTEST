@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include "kernel.h"
 #include "vgacolor.h"
+#include "io.h"
 
 
 
@@ -16,6 +17,22 @@ void kclear() {
             term_buff[index] = ' ' | (uint16_t) term_color << 8;
         }
     }
+}
+
+// never going to use this rn
+void disable_cursor() {
+    outb(0x3D4, 0x0A);
+	outb(0x3D5, 0x20);
+}
+
+void update_cursor(int x, int y)
+{
+	uint16_t pos = y * VGA_width + x;
+
+	outb(0x3D4, 0x0F);
+	outb(0x3D5, (uint8_t) (pos & 0xFF));
+	outb(0x3D4, 0x0E);
+	outb(0x3D5, (uint8_t) ((pos >> 8) & 0xFF));
 }
 
 void VGA_init() {
@@ -50,4 +67,5 @@ void kprint(char* c) {
             }
         }
     }
+    update_cursor(term_x, term_y);
 }
