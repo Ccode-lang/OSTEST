@@ -1,0 +1,1 @@
+qemu-system-i386 --enable-kvm -cdrom ./build/test.iso -d int,cpu_reset

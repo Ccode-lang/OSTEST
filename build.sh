@@ -29,4 +29,4 @@ bash <<< "$GCC $LINKERFLAGS"
 
 cp ./build/test.bin ./isodir/boot/test.bin
 
-grub-mkrescue -o ./build/myos.iso isodir
+grub-mkrescue -o ./build/test.iso isodir
