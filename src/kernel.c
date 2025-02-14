@@ -2,6 +2,7 @@
 #include <stddef.h>
 #include <stdint.h>
 #include "kout.h"
+#include "GDT.h"
 
 
 size_t VGA_width = 80;
@@ -25,4 +26,12 @@ void kmain() {
     VGA_init();
 
     kprint("Hello, World!");
+    knewline();
+    kprint("Loading GDT...");
+    knewline();
+
+    GDT_init();
+
+    kprint("Loaded GDT.");
+
 }

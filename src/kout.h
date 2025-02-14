@@ -13,6 +13,8 @@ extern void VGA_init();
 
 extern uint16_t vga_entry(char c, uint8_t color);
 
+extern void knewline();
+
 extern void kputchar(char c);
 
 extern void kprint();

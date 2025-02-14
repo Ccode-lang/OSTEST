@@ -47,6 +47,16 @@ uint16_t vga_entry(char c, uint8_t color) {
     return c | (uint16_t) color << 8;
 }
 
+void knewline() {
+    term_y++;
+    if (term_y == VGA_height) {
+        kclear();
+        term_y = 0;
+    }
+    term_x = 0;
+
+    update_cursor(term_x, term_y);
+}
 
 void kputchar(char c) {
     term_buff[vga_index(term_x, term_y)] = vga_entry(c, term_color);
