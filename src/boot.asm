@@ -33,7 +33,8 @@ _start:
     extern kmain
     call kmain
 
+global hang
+hang:
     cli
-
     .hang: hlt
     jmp .hang

@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include "kout.h"
 #include "GDT.h"
+#include "IDT.h"
 
 
 size_t VGA_width = 80;
@@ -33,5 +34,14 @@ void kmain() {
     GDT_init();
 
     kprint("Loaded GDT.");
+    knewline();
 
+    kprint("Loading IDT");
+    knewline();
+
+    setupIDT();
+
+    kprint("IDT loaded");
+
+    __asm__("div al, bl" : : "a" (0x01), "b" (0x00));
 }

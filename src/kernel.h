@@ -1,5 +1,9 @@
 #ifndef KERNEL
 #define KERNEL
+#include <stddef.h>
+#include <stdint.h>
+
+extern void hang(void);
 
 extern size_t VGA_width;
 extern size_t VGA_height;

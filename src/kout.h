@@ -1,5 +1,6 @@
 #ifndef KOUT
 #define KOUT
+#include <stddef.h>
 
 extern size_t vga_index(size_t tx, size_t ty);
 
@@ -17,6 +18,6 @@ extern void knewline();
 
 extern void kputchar(char c);
 
-extern void kprint();
+extern void kprint(char* c);
 
 #endif
