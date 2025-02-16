@@ -1,6 +1,7 @@
 #ifndef KOUT
 #define KOUT
 #include <stddef.h>
+#include <stdint.h>
 
 extern size_t vga_index(size_t tx, size_t ty);
 

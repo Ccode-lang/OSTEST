@@ -1,6 +1,7 @@
 #include "IDT.h"
 #include "kout.h"
 #include "kernel.h"
+#include "isr.h"
 
 uint8_t highest_gate = 0;
 
@@ -22,9 +23,4 @@ void setupIDT() {
     IDTR.offset = (uint32_t) IDTP;
     
     __asm__("lidt [%0]" : : "r" (&IDTR));
-}
-
-void isr_test(void) {
-    knewline();
-    kprint("Divide by zero Error.\0");
 }

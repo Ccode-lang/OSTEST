@@ -22,8 +22,6 @@ extern GateDescriptor *IDTP;
 extern IDTDescriptor IDTR;
 
 
-extern void isr0(void); // divide by zero
-
 extern void setupIDT();
 
 #endif

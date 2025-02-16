@@ -17,14 +17,13 @@ mkdir build
 bash <<< "nasm $NASMFLAGS ./src/boot.asm -o ./build/boot.o"
 bash <<< "nasm $NASMFLAGS ./src/GDT.asm -o ./build/GDT.o"
 bash <<< "nasm $NASMFLAGS ./src/IDT.asm -o ./build/IDTASM.o"
+bash <<< "nasm $NASMFLAGS ./src/isr.asm -o ./build/israsm.o"
 
 bash <<< "$GCC -c ./src/kernel.c -o ./build/kernel.o $COMPFLAGS"
-
 bash <<< "$GCC -c ./src/kout.c -o ./build/kout.o $COMPFLAGS"
-
 bash <<< "$GCC -c ./src/io.c -o ./build/io.o $COMPFLAGS"
-
 bash <<< "$GCC -c ./src/IDT.c -o ./build/IDT.o $COMPFLAGS"
+bash <<< "$GCC -c ./src/isr.c -o ./build/isr.o $COMPFLAGS"
 
 
 bash <<< "$GCC $LINKERFLAGS"
