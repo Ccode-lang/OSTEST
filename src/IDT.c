@@ -19,6 +19,13 @@ void makeGate(uint8_t vector, uint32_t offset, uint8_t flags) {
 
 void setupIDT() {
     makeGate(0, (uint32_t)isr0, TRAP_GATE);
+    makeGate(1, (uint32_t)isr1, TRAP_GATE);
+    makeGate(2, (uint32_t)isr2, INTERRUPT_GATE);
+    makeGate(3, (uint32_t)isr3, TRAP_GATE);
+
+    
+
+
     IDTR.size = (highest_gate + 1) * 8 - 1;
     IDTR.offset = (uint32_t) IDTP;
     

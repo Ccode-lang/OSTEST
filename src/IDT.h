@@ -2,7 +2,8 @@
 #define IDT
 #include <stdint.h>
 
-#define TRAP_GATE 0b10001110
+#define TRAP_GATE 0b10001111
+#define INTERRUPT_GATE 0b10001110
 
 typedef struct {
     uint16_t offset_low;

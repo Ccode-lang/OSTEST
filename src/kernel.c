@@ -43,5 +43,7 @@ void kmain() {
 
     kprint("IDT loaded");
 
+    __asm__("int3");
+
     __asm__("div al, bl" : : "a" (0x01), "b" (0x00));
 }

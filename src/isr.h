@@ -6,15 +6,15 @@
 // A list of ISRs
 
 extern void isr0(void); // divide by zero
-/*
+
 extern void isr1(void); // Debug
 
 extern void isr2(void); // nmi
 
 extern void isr3(void); // breakpoint
 
-extern void isr4(void); // overflow
-
+// int 4 is the 64 bit overflow error so that doesn't matter here.
+/*
 extern void isr5(void); // bound range exceeded
 
 extern void isr6(void); // invalid opcode
