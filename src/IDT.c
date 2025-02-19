@@ -23,6 +23,11 @@ void setupIDT() {
     makeGate(2, (uint32_t)isr2, INTERRUPT_GATE);
     makeGate(3, (uint32_t)isr3, TRAP_GATE);
 
+    makeGate(5, (uint32_t)isr5, TRAP_GATE);
+    makeGate(6, (uint32_t)isr6, TRAP_GATE);
+    makeGate(7, (uint32_t)isr7, TRAP_GATE);
+    makeGate(8, (uint32_t)isr8, TRAP_GATE);
+
     
 
 

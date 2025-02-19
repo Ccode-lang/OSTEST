@@ -43,7 +43,12 @@ void kmain() {
 
     kprint("IDT loaded");
 
+    // int 3 breakpoint
     __asm__("int3");
 
-    __asm__("div al, bl" : : "a" (0x01), "b" (0x00));
+    // int 8 double fault
+    __asm__("int 255");
+
+    // int 0 division by zero test
+    //__asm__("div al, bl" : : "a" (0x01), "b" (0x00));
 }
