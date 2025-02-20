@@ -39,7 +39,29 @@ void isr7c(void) {
     kprint("Device not available.");
 }
 
-void isr8c(void) {
+void isr8c(uint32_t error_code) {
     knewline();
-    kprint("Double fault.");
+    kprint("Double fault. ");
+}
+
+//isr9 is coprocessor segment overrun which is an outdated error.
+
+void isr10c(uint32_t error_code) {
+    knewline();
+    kprint("Invalid segment selector in task");
+}
+
+void isr11c(uint32_t error_code) {
+    knewline();
+    kprint("Segment present bit not set");
+}
+
+void isr12c(uint32_t error_code) {
+    knewline();
+    kprint("Stack-Segment fault");
+}
+
+void isr13c(uint32_t error_code) {
+    knewline();
+    kprint("General protection fault");
 }

@@ -57,3 +57,34 @@ global isr8
 isr8:
     call isr8c
     jmp hang
+
+
+; isr9 is coprocessor segment overrun which is an outdated error.
+
+
+extern isr10c
+global isr10
+isr10:
+    call isr10c
+    jmp hang
+
+
+extern isr11c
+global isr11
+isr11:
+    call isr11c
+    jmp hang
+
+
+extern isr12c
+global isr12
+isr12:
+    call isr12c
+    jmp hang
+
+
+extern isr13c
+global isr13
+isr13:
+    call isr13c
+    jmp hang

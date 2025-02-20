@@ -46,7 +46,7 @@ void kmain() {
     // int 3 breakpoint
     __asm__("int3");
 
-    // int 8 double fault
+    // int 13 general protection fault
     __asm__("int 255");
 
     // int 0 division by zero test
