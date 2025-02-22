@@ -4,6 +4,7 @@
 #include "kout.h"
 #include "GDT.h"
 #include "IDT.h"
+#include "paging.h"
 
 
 size_t VGA_width = 80;
@@ -46,8 +47,14 @@ void kmain() {
     // int 3 breakpoint
     __asm__("int3");
 
+    initPaging();
+
+    knewline();
+
+    kprint("It worked paging is on");
+
     // int 13 general protection fault
-    __asm__("int 255");
+    //__asm__("int 255");
 
     // int 0 division by zero test
     //__asm__("div al, bl" : : "a" (0x01), "b" (0x00));

@@ -7,7 +7,7 @@ A testing 32 bit kernel that I am writing for fun.
  - [ ] IO ports (working outb, untested inb)
  - [X] GDT
  - [ ] IDT (only interrupts 0-14 are done)
- - [ ] Paging
+ - [X] Paging
  - [ ] PS/2 keyboard driver
 
 # Compiler

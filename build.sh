@@ -24,6 +24,7 @@ bash <<< "$GCC -c ./src/kout.c -o ./build/kout.o $COMPFLAGS"
 bash <<< "$GCC -c ./src/io.c -o ./build/io.o $COMPFLAGS"
 bash <<< "$GCC -c ./src/IDT.c -o ./build/IDT.o $COMPFLAGS"
 bash <<< "$GCC -c ./src/isr.c -o ./build/isr.o $COMPFLAGS"
+bash <<< "$GCC -c ./src/paging.c -o ./build/paging.o $COMPFLAGS"
 
 
 bash <<< "$GCC $LINKERFLAGS"
