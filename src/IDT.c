@@ -22,16 +22,17 @@ void setupIDT() {
     makeGate(1, (uint32_t)isr1, TRAP_GATE);
     makeGate(2, (uint32_t)isr2, INTERRUPT_GATE);
     makeGate(3, (uint32_t)isr3, TRAP_GATE);
-
+    // 4 not defined
     makeGate(5, (uint32_t)isr5, TRAP_GATE);
     makeGate(6, (uint32_t)isr6, TRAP_GATE);
     makeGate(7, (uint32_t)isr7, TRAP_GATE);
     makeGate(8, (uint32_t)isr8, TRAP_GATE);
-
+    // 9 not defined
     makeGate(10, (uint32_t)isr10, TRAP_GATE);
     makeGate(11, (uint32_t)isr11, TRAP_GATE);
     makeGate(12, (uint32_t)isr12, TRAP_GATE);
     makeGate(13, (uint32_t)isr13, TRAP_GATE);
+    makeGate(14, (uint32_t)isr14, TRAP_GATE);
 
     
 

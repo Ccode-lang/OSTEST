@@ -65,3 +65,8 @@ void isr13c(uint32_t error_code) {
     knewline();
     kprint("General protection fault");
 }
+
+void isr14c(uint32_t error_code) {
+    knewline();
+    kprint("Page fault.");
+}

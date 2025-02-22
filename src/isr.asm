@@ -88,3 +88,9 @@ global isr13
 isr13:
     call isr13c
     jmp hang
+
+extern isr14c
+global isr14
+isr14:
+    call isr14c
+    jmp hang

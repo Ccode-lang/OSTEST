@@ -32,8 +32,10 @@ extern void isr11(void); // segment present bit not set
 extern void isr12(void); // stack segment fault. present bit not set on stack segment regiter, stack not in canonical form, stack limit exceeded
 
 extern void isr13(void); // general protection fault
+
+extern void isr14(void); // Page fault
 /*
-// TODO: define isr 14-31
+// TODO: define isr 13-31
 
 */
 #endif

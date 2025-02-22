@@ -6,7 +6,8 @@ A testing 32 bit kernel that I am writing for fun.
  - [X] Simple VGA
  - [ ] IO ports (working outb, untested inb)
  - [X] GDT
- - [ ] IDT (only interrupts 0-13 are done)
+ - [ ] IDT (only interrupts 0-14 are done)
+ - [ ] Paging
  - [ ] PS/2 keyboard driver
 
 # Compiler
